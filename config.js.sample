@@ -1,0 +1,31 @@
+module.exports = {
+  appName: 'image-service',
+  env: 'development',
+  port: 3000,
+  imageUrlBase: 'http://images.yourdomain.com',
+  upyun: {
+    buckname: 'buckname',
+    username: 'username',
+    password: 'password',
+    endpoint: 'v0',
+    purgeUrl: 'http://purge.upyun.com/purge/',
+  },
+  logger: {
+    udp: {
+      port: 10001,
+      appName: 'image-service',
+      host: '192.168.100.100',
+      handleExceptions: true,
+      humanReadableUnhandledException: true,
+    },
+    mailer: {
+      to: 'notification@yourdomain.com',
+      from: '请勿回复<no-reply@yourdomain.com>',
+      host: 'smtp.exmail.qq.com',
+      username: 'no-reply@yourdomain.com',
+      password: 'password',
+      level: 'error',
+      handleExceptions: true,
+    },
+  },
+};
